@@ -12,7 +12,30 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/hello', function () {
+    return view('hello');
 });
+
+Route::get('users/{id}/friends', function ($id) {
+    return $id." "."friends";
+})->where('id','[0-9]+');
+
+Route::get('users/{id}/friends', function ($id) {
+    return $id." "."friends";
+})->where('id','[0-9]+');
+
+Route::ge
+
+
+
+
+
+
+
+Route::get('/hello', function () {
+    return view('hello');
+});
+
+Route::get('users/{id}/friends/{msg}',function ($id,$ms g){
+    return$msg."".$id."friends.";
+})->where('id','[0-9]+');
